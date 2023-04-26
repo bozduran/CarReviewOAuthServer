@@ -38,7 +38,8 @@ import java.util.UUID;
 
 @Configuration
 @EnableWebSecurity
-public class SpringSecurityConfig {
+public class SecurityConfig {
+
     @Bean
     @Order(1)
     public SecurityFilterChain authorizationServerSecurityFilterChain(HttpSecurity http)
@@ -141,4 +142,5 @@ public class SpringSecurityConfig {
     public AuthorizationServerSettings authorizationServerSettings() {
         return AuthorizationServerSettings.builder().build();
     }
+
 }
